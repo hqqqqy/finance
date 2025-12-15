@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "katex/dist/katex.min.css";
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+    
+    /* Primary: 财富绿/成长绿 */
+    --primary: 145 60% 55%;
+    --primary-foreground: 0 0% 98.5%;
+    
+    /* Accent: 金色/投资色 */
+    --accent: 85 65% 75%;
+    --accent-foreground: 285 35% 20%;
+    
+    /* Secondary: 深灰/专业感 */
+    --secondary: 260 10% 25%;
+    --secondary-foreground: 0 0% 98.5%;
+    
+    /* Background & Foreground */
+    --background: 0 0% 100%;
+    --foreground: 285.823 35% 14.1%;
+    
+    /* Card */
+    --card: 0 0% 100%;
+    --card-foreground: 285.823 35% 14.1%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 285.823 35% 14.1%;
+    
+    /* Muted */
+    --muted: 286.375 10% 96.7%;
+    --muted-foreground: 285.938 20% 55.2%;
+    
+    /* Border & Input */
+    --border: 286.32 15% 92%;
+    --input: 286.32 15% 92%;
+    --ring: 286.067 20% 70.5%;
+    
+    /* Destructive */
+    --destructive: 27.325 85% 57.7%;
+    --destructive-foreground: 0 0% 98.5%;
+  }
+
+  .dark {
+    --background: 285.823 35% 14.1%;
+    --foreground: 0 0% 98.5%;
+    
+    --primary: 145 70% 65%;
+    --primary-foreground: 0 0% 10%;
+    
+    --card: 285.885 30% 21%;
+    --card-foreground: 0 0% 98.5%;
+    
+    --popover: 285.885 30% 21%;
+    --popover-foreground: 0 0% 98.5%;
+    
+    --secondary: 285 15% 30%;
+    --secondary-foreground: 0 0% 98.5%;
+    
+    --muted: 286 15% 25%;
+    --muted-foreground: 286 15% 65%;
+    
+    --accent: 85 55% 65%;
+    --accent-foreground: 0 0% 10%;
+    
+    --border: 0 0% 10%;
+    --input: 285 20% 25%;
+    --ring: 286 20% 50%;
+    
+    --destructive: 27.325 85% 57.7%;
+    --destructive-foreground: 0 0% 98.5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+

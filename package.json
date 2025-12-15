@@ -1,0 +1,16 @@
+{
+  "name": "finance-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "yarn@1.22.22",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspace finance-calc-lab dev",
+    "build": "yarn workspace finance-calc-lab build",
+    "start": "yarn workspace finance-calc-lab start",
+    "lint": "yarn workspace finance-calc-lab lint"
+  }
+}
+
