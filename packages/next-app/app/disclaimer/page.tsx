@@ -18,7 +18,7 @@ export default function DisclaimerPage() {
 
         <div className="prose prose-slate dark:prose-invert max-w-none bg-card p-8 rounded-lg border">
           <p className="text-lg text-muted-foreground mb-8">
-            Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+            Last updated: December 16, 2025
           </p>
 
           <section className="mb-8">
@@ -130,7 +130,21 @@ export default function DisclaimerPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
             <p>
-              If you have any questions about this disclaimer, please review our{" "}
+              If you have any questions about this disclaimer, you can contact us at{" "}
+              <a
+                href="mailto:danghuong2092c@gmail.com"
+                className="text-emerald-600 hover:underline"
+              >
+                danghuong2092c@gmail.com
+              </a>
+              .
+            </p>
+            <p>
+              This website and its calculators are provided for educational and informational purposes only. You use them at your own
+              risk, and we do not accept liability for any outcomes or losses.
+            </p>
+            <p>
+              For additional context, please also review our{" "}
               <Link href="/terms-of-service" className="text-emerald-600 hover:underline">
                 Terms of Service
               </Link>{" "}

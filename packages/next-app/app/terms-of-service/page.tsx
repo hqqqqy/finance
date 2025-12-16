@@ -18,7 +18,7 @@ export default function TermsOfServicePage() {
 
         <div className="prose prose-slate dark:prose-invert max-w-none bg-card p-8 rounded-lg border">
           <p className="text-lg text-muted-foreground mb-8">
-            Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+            Last updated: December 16, 2025
           </p>
 
           <section className="mb-8">
@@ -69,6 +69,9 @@ export default function TermsOfServicePage() {
             <p className="bg-amber-50 dark:bg-amber-950 p-4 rounded-lg border-l-4 border-amber-500">
               <strong>Important:</strong> All calculators, tools, and content on this website are provided for educational and informational 
               purposes only. They are not intended to be professional financial, investment, tax, or legal advice.
+            </p>
+            <p>
+              You use this website and its calculators at your own risk, and we do not accept liability for any outcomes or losses.
             </p>
             <p>
               For full details, please read our comprehensive{" "}
@@ -195,6 +198,17 @@ export default function TermsOfServicePage() {
             <p>
               If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions will remain 
               in effect. These Terms constitute the entire agreement between us regarding our website and supersede any prior agreements.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+            <p>
+              If you have any questions about these Terms of Service, you can contact us at{" "}
+              <a href="mailto:danghuong2092c@gmail.com" className="text-emerald-600 hover:underline">
+                danghuong2092c@gmail.com
+              </a>
+              .
             </p>
           </section>
 

@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Analytics from "@/components/Analytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Finance Calc Lab – Free Financial Calculators & Money Tools",
+  metadataBase: new URL("https://financecalclab.com"),
+  title: {
+    default: "Finance Calc Lab – Free Financial Calculators & Money Tools",
+    template: "%s | Finance Calc Lab"
+  },
   description: "Professional finance calculators for budgeting, investing, loans, and taxes. Free tools with step-by-step guides to help you make smarter money decisions.",
   keywords: ["finance calculator", "budget calculator", "loan calculator", "investment calculator", "mortgage calculator", "financial planning tools"],
   authors: [{ name: "Finance Calc Lab" }],
+  creator: "Finance Calc Lab",
+  publisher: "Finance Calc Lab",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   alternates: {
     canonical: "https://financecalclab.com"
   },
@@ -16,8 +28,43 @@ export const metadata: Metadata = {
     url: "https://financecalclab.com",
     title: "Finance Calc Lab – Free Financial Calculators",
     description: "Professional finance calculators for budgeting, investing, loans, and taxes.",
-    siteName: "Finance Calc Lab"
-  }
+    siteName: "Finance Calc Lab",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Finance Calc Lab - Free Financial Calculators"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Finance Calc Lab – Free Financial Calculators",
+    description: "Professional finance calculators for budgeting, investing, loans, and taxes.",
+    images: ["/og-image.png"]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
+  verification: {
+    // google: "your-google-verification-code",
+    // yandex: "your-yandex-verification-code",
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased min-h-screen flex flex-col">
+        <Analytics />
         <header className="sticky top-0 z-40 w-full backdrop-blur bg-white/70 dark:bg-gray-900/60 border-b">
           <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
             <Link href="/" className="font-semibold text-xl text-emerald-600 hover:text-emerald-700 transition-colors">

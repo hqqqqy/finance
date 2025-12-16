@@ -14,7 +14,8 @@ export default function LearnPage() {
       title: "Personal Finance Basics",
       description: "Essential money management skills for everyday life",
       icon: DollarSign,
-      color: "emerald",
+      iconBg: "bg-emerald-100 dark:bg-emerald-900",
+      iconColor: "text-emerald-600 dark:text-emerald-400",
       topics: [
         "Budgeting 101",
         "Emergency Fund Guide",
@@ -28,7 +29,8 @@ export default function LearnPage() {
       title: "Investing Fundamentals",
       description: "Learn how to grow your wealth through smart investing",
       icon: TrendingUp,
-      color: "blue",
+      iconBg: "bg-blue-100 dark:bg-blue-900",
+      iconColor: "text-blue-600 dark:text-blue-400",
       topics: [
         "Compound Interest Explained",
         "Stock Market Basics",
@@ -43,7 +45,8 @@ export default function LearnPage() {
       title: "Real Estate Investing",
       description: "Everything about buying, owning, and investing in property",
       icon: Home,
-      color: "amber",
+      iconBg: "bg-amber-100 dark:bg-amber-900",
+      iconColor: "text-amber-600 dark:text-amber-400",
       topics: [
         "First-Time Home Buyer Guide",
         "Rent vs Buy Analysis",
@@ -57,7 +60,8 @@ export default function LearnPage() {
       title: "Economics Basics",
       description: "Understand the economic forces that affect your finances",
       icon: BookOpen,
-      color: "violet",
+      iconBg: "bg-violet-100 dark:bg-violet-900",
+      iconColor: "text-violet-600 dark:text-violet-400",
       topics: [
         "Microeconomics Basics",
         "Macroeconomics Basics",
@@ -114,8 +118,8 @@ export default function LearnPage() {
                 className="bg-card rounded-xl p-8 border shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={`p-3 bg-${category.color}-100 dark:bg-${category.color}-900 rounded-lg`}>
-                    <Icon className={`w-8 h-8 text-${category.color}-600 dark:text-${category.color}-400`} />
+                  <div className={`p-3 ${category.iconBg} rounded-lg`}>
+                    <Icon className={`w-8 h-8 ${category.iconColor}`} />
                   </div>
                   <div>
                     <h2 className="text-2xl font-bold">{category.title}</h2>
