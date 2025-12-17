@@ -47,7 +47,7 @@ export default function RentVsBuyCalculator() {
           <ResultCard title="Rent vs Buy Comparison">
             <div className="grid md:grid-cols-3 gap-4">
               <ResultItem label="Total Rent Cost" value={formatCurrency(result.totalRentCost)} color="blue" />
-              <ResultItem label="Total Buy Cost" value={formatCurrency(result.totalBuyCost)} color="green" />
+              <ResultItem label="Total Buy Cost" value={formatCurrency(result.totalBuyCost)} color="emerald" />
               <ResultItem label="Recommendation" value={result.recommendation === "buy" ? "Buy" : "Rent"} color={result.recommendation === "buy" ? "emerald" : "amber"} />
             </div>
           </ResultCard>

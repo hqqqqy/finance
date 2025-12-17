@@ -41,7 +41,7 @@ export default function HomeEquityCalculator() {
           <ResultCard title="Your Home Equity">
             <div className="grid md:grid-cols-3 gap-4">
               <ResultItem label="Home Equity" value={formatCurrency(result.homeEquity)} color="emerald" />
-              <ResultItem label="Equity %" value={formatPercent(result.equityPercent)} color="green" />
+              <ResultItem label="Equity %" value={formatPercent(result.equityPercent)} color="violet" />
               <ResultItem label="Loan-to-Value" value={formatPercent(result.loanToValue)} color="blue" />
             </div>
           </ResultCard>

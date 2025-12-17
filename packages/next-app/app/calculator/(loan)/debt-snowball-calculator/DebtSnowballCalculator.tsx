@@ -122,7 +122,7 @@ export default function DebtSnowballCalculator() {
               <ResultCard title="Snowball Method (Smallest Balance First)">
                 <div className="space-y-2">
                   <ResultItem label="Time to Debt Free" value={`${Math.floor(snowballResult.totalMonths/12)}y ${snowballResult.totalMonths%12}m`} color="amber" />
-                  <ResultItem label="Total Interest" value={formatCurrency(snowballResult.totalInterest)} color="purple" />
+                  <ResultItem label="Total Interest" value={formatCurrency(snowballResult.totalInterest)} color="violet" />
                   <ResultItem label="Total Paid" value={formatCurrency(snowballResult.totalPayment)} color="blue" />
                 </div>
               </ResultCard>
@@ -130,7 +130,7 @@ export default function DebtSnowballCalculator() {
               <ResultCard title="Avalanche Method (Highest Rate First)">
                 <div className="space-y-2">
                   <ResultItem label="Time to Debt Free" value={`${Math.floor(avalancheResult.totalMonths/12)}y ${avalancheResult.totalMonths%12}m`} color="amber" />
-                  <ResultItem label="Total Interest" value={formatCurrency(avalancheResult.totalInterest)} color="purple" />
+                  <ResultItem label="Total Interest" value={formatCurrency(avalancheResult.totalInterest)} color="violet" />
                   <ResultItem label="Total Paid" value={formatCurrency(avalancheResult.totalPayment)} color="blue" />
                 </div>
               </ResultCard>

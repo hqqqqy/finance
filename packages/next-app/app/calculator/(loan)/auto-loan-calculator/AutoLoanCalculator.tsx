@@ -99,27 +99,9 @@ export default function AutoLoanCalculator() {
               <div className="grid md:grid-cols-3 gap-4">
                 <ResultItem label="Monthly Payment" value={formatCurrency(result.monthlyPayment)} color="amber" />
                 <ResultItem label="Total Payment" value={formatCurrency(result.totalPayment)} color="blue" />
-                <ResultItem label="Total Interest" value={formatCurrency(result.totalInterest)} color="purple" />
+                <ResultItem label="Total Interest" value={formatCurrency(result.totalInterest)} color="violet" />
               </div>
             </ResultCard>
-
-            {result.yearlyBreakdown && result.yearlyBreakdown.length > 0 && (
-              <Card className="mb-8">
-                <CardHeader><CardTitle>Loan Balance Over Time</CardTitle></CardHeader>
-                <CardContent>
-                  <ResponsiveContainer width="100%" height={400}>
-                    <AreaChart data={result.yearlyBreakdown}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="year" />
-                      <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
-                      <Tooltip formatter={(value: number) => formatCurrency(value)} />
-                      <Legend />
-                      <Area type="monotone" dataKey="balance" stroke="#f59e0b" fill="#f59e0b" name="Balance" />
-                    </AreaChart>
-                  </ResponsiveContainer>
-                </CardContent>
-              </Card>
-            )}
           </>
         )}
 

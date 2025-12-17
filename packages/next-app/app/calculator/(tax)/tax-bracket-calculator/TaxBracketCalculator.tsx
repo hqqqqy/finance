@@ -37,9 +37,9 @@ export default function TaxBracketCalculator() {
           <ResultCard title="Your Tax Bracket">
             <div className="grid md:grid-cols-4 gap-4">
               <ResultItem label="Tax Bracket" value={result.bracket} color="violet" />
-              <ResultItem label="Marginal Rate" value={`${result.marginalRate}%`} color="purple" />
+              <ResultItem label="Marginal Rate" value={`${result.marginalRate}%`} color="violet" />
               <ResultItem label="Effective Rate" value={formatPercent(result.effectiveRate)} color="blue" />
-              <ResultItem label="Total Tax" value={formatCurrency(result.totalTax)} color="red" />
+              <ResultItem label="Total Tax" value={formatCurrency(result.totalTax)} color="amber" />
             </div>
             <div className="mt-4 p-4 bg-violet-50 dark:bg-violet-950 rounded-lg">
               <p className="text-sm font-semibold">Net Income: {formatCurrency(result.netIncome)}</p>

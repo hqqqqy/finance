@@ -47,7 +47,7 @@ export default function PaycheckCalculator() {
             <div className="grid md:grid-cols-3 gap-4 mb-4">
               <ResultItem label="Gross Pay" value={formatCurrency(result.grossPay)} color="blue" />
               <ResultItem label="Net Pay" value={formatCurrency(result.netPay)} color="emerald" />
-              <ResultItem label="Take Home %" value={formatPercent(result.takeHomePercent)} color="cyan" />
+              <ResultItem label="Take Home %" value={formatPercent(result.takeHomePercent)} color="violet" />
             </div>
             <div className="grid md:grid-cols-4 gap-2">
               <div className="p-3 bg-gray-50 dark:bg-gray-900 rounded"><p className="text-xs text-gray-600 dark:text-gray-400">Federal Tax</p><p className="font-semibold text-sm">{formatCurrency(result.federalTax)}</p></div>

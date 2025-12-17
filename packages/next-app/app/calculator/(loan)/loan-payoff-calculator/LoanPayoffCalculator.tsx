@@ -95,7 +95,7 @@ export default function LoanPayoffCalculator() {
               <div className="grid md:grid-cols-4 gap-4 mb-4">
                 <ResultItem label="Interest Saved" value={formatCurrency(result.interestSaved)} color="emerald" />
                 <ResultItem label="Time Saved" value={`${Math.floor(result.timeSaved/12)}y ${result.timeSaved%12}m`} color="blue" />
-                <ResultItem label="Total Saved" value={formatCurrency(result.totalSaved)} color="purple" />
+                <ResultItem label="Total Saved" value={formatCurrency(result.totalSaved)} color="violet" />
                 <ResultItem label="New Payoff" value={`${Math.floor(result.newPayoffMonths/12)}y ${result.newPayoffMonths%12}m`} color="amber" />
               </div>
               <div className="grid md:grid-cols-2 gap-4">

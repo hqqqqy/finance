@@ -86,8 +86,8 @@ export default function BudgetCalculator() {
             <div className="grid md:grid-cols-4 gap-4">
               <ResultItem label="Total Income" value={formatCurrency(result.totalIncome)} color="emerald" />
               <ResultItem label="Total Expenses" value={formatCurrency(result.totalExpenses)} color="blue" />
-              <ResultItem label="Net Income" value={formatCurrency(result.netIncome)} color={result.netIncome >= 0 ? "emerald" : "red"} />
-              <ResultItem label="Savings Rate" value={formatPercent(result.savingsRate)} color="purple" />
+              <ResultItem label="Net Income" value={formatCurrency(result.netIncome)} color={result.netIncome >= 0 ? "emerald" : "amber"} />
+              <ResultItem label="Savings Rate" value={formatPercent(result.savingsRate)} color="violet" />
             </div>
             {result.recommendations.length > 0 && (
               <div className="mt-4 p-4 bg-cyan-50 dark:bg-cyan-950 rounded-lg">

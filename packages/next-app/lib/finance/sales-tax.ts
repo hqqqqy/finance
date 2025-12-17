@@ -11,7 +11,7 @@ export function calculateSalesTax(preTaxAmount: number, taxRate: number): SalesT
   return { preTaxAmount, taxRate, taxAmount, totalAmount };
 }
 
-export function calculateReverseS TaxResult(totalAmount: number, taxRate: number): SalesTaxResult {
+export function calculateReverseSalesTax(totalAmount: number, taxRate: number): SalesTaxResult {
   const preTaxAmount = totalAmount / (1 + taxRate);
   const taxAmount = totalAmount - preTaxAmount;
   return { preTaxAmount, taxRate, taxAmount, totalAmount };

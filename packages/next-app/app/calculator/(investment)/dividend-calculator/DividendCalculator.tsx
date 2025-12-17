@@ -118,7 +118,7 @@ export default function DividendCalculator() {
               <div className="grid md:grid-cols-4 gap-4">
                 <ResultItem label="Current Annual Dividend" value={formatCurrency(result.annualDividend)} color="emerald" />
                 <ResultItem label="Monthly Dividend" value={formatCurrency(result.monthlyDividend)} color="blue" />
-                <ResultItem label="Dividend Yield" value={formatPercent(result.dividendYield)} color="purple" />
+                <ResultItem label="Dividend Yield" value={formatPercent(result.dividendYield)} color="violet" />
                 <ResultItem label="Total Investment" value={formatCurrency(result.totalInvestment)} color="amber" />
               </div>
               <div className="mt-4 grid md:grid-cols-2 gap-4">
@@ -144,7 +144,7 @@ export default function DividendCalculator() {
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="year" label={{ value: 'Year', position: 'insideBottom', offset: -5 }} />
                       <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
-                      <Tooltip formatter={(value: number) => formatCurrency(value)} />
+                      <Tooltip formatter={(value) => formatCurrency(value as number)} />
                       <Legend />
                       <Area type="monotone" dataKey="stockValue" stroke="#10b981" fill="#10b981" name="Stock Value" />
                       <Area type="monotone" dataKey="annualDividend" stroke="#3b82f6" fill="#3b82f6" name="Annual Dividend" />

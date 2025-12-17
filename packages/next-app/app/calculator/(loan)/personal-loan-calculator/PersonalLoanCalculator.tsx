@@ -80,7 +80,7 @@ export default function PersonalLoanCalculator() {
             <div className="grid md:grid-cols-3 gap-4">
               <ResultItem label="Monthly Payment" value={formatCurrency(result.monthlyPayment)} color="amber" />
               <ResultItem label="Total Payment" value={formatCurrency(result.totalPayment)} color="blue" />
-              <ResultItem label="Total Interest" value={formatCurrency(result.totalInterest)} color="purple" />
+              <ResultItem label="Total Interest" value={formatCurrency(result.totalInterest)} color="violet" />
             </div>
           </ResultCard>
         )}

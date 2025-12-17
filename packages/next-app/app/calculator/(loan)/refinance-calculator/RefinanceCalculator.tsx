@@ -49,7 +49,7 @@ export default function RefinanceCalculator() {
           features={[
             { icon: CheckCircle2, text: "Savings Analysis" },
             { icon: Calculator, text: "Break-Even Point" },
-            { icon: CreditCard, text="Smart Decision" }
+            { icon: CreditCard, text: "Smart Decision" }
           ]}
         />
 

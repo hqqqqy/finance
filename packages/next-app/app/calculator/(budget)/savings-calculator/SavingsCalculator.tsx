@@ -72,7 +72,7 @@ export default function SavingsCalculator() {
         {result && (
           <ResultCard title="Savings Goal Timeline">
             <div className="grid md:grid-cols-3 gap-4">
-              <ResultItem label="Months to Goal" value={Math.ceil(result.monthsToGoal).toString()} color="cyan" />
+              <ResultItem label="Months to Goal" value={Math.ceil(result.monthsToGoal).toString()} color="violet" />
               <ResultItem label="Years to Goal" value={result.yearsToGoal.toFixed(1)} color="blue" />
               <ResultItem label="Interest Earned" value={formatCurrency(result.interestEarned)} color="emerald" />
             </div>

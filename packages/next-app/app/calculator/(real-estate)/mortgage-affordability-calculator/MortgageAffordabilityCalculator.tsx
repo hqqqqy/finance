@@ -44,7 +44,7 @@ export default function MortgageAffordabilityCalculator() {
         {result && (
           <ResultCard title="You Can Afford">
             <div className="grid md:grid-cols-3 gap-4">
-              <ResultItem label="Max Home Price" value={formatCurrency(result.maxHomePrice)} color="green" />
+              <ResultItem label="Max Home Price" value={formatCurrency(result.maxHomePrice)} color="emerald" />
               <ResultItem label="Max Loan Amount" value={formatCurrency(result.maxLoanAmount)} color="blue" />
               <ResultItem label="Monthly Payment" value={formatCurrency(result.monthlyPayment)} color="amber" />
             </div>

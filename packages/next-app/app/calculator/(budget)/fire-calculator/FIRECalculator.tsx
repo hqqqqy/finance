@@ -48,10 +48,10 @@ export default function FIRECalculator() {
         {result && (
           <ResultCard title="Your FIRE Plan">
             <div className="grid md:grid-cols-4 gap-4">
-              <ResultItem label="FIRE Number" value={formatCurrency(result.fireNumber)} color="cyan" />
+              <ResultItem label="FIRE Number" value={formatCurrency(result.fireNumber)} color="emerald" />
               <ResultItem label="Years to FIRE" value={result.yearsToFire.toFixed(1)} color="emerald" />
               <ResultItem label="Retirement Age" value={result.projectedRetirementAge.toString()} color="blue" />
-              <ResultItem label="Savings Rate" value={formatPercent(result.requiredSavingsRate)} color="purple" />
+              <ResultItem label="Savings Rate" value={formatPercent(result.requiredSavingsRate)} color="violet" />
             </div>
             <div className="mt-4 p-4 bg-cyan-50 dark:bg-cyan-950 rounded-lg">
               <p className="text-sm font-semibold">🎯 FIRE Date: {result.fireDate}</p>

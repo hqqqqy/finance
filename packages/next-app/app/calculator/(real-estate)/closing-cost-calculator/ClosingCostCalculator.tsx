@@ -44,12 +44,12 @@ export default function ClosingCostCalculator() {
           <ResultCard title="Closing Cost Breakdown">
             <div className="grid md:grid-cols-3 gap-4 mb-4">
               <ResultItem label="Lender Fees" value={formatCurrency(result.lenderFees)} color="blue" />
-              <ResultItem label="Title Fees" value={formatCurrency(result.titleFees)} color="purple" />
+              <ResultItem label="Title Fees" value={formatCurrency(result.titleFees)} color="violet" />
               <ResultItem label="Government Fees" value={formatCurrency(result.governmentFees)} color="amber" />
             </div>
             <div className="grid md:grid-cols-2 gap-4">
-              <ResultItem label="Prepaid Items" value={formatCurrency(result.prepaidItems)} color="cyan" />
-              <ResultItem label="Total Closing Costs" value={formatCurrency(result.totalClosingCosts)} color="red" />
+              <ResultItem label="Prepaid Items" value={formatCurrency(result.prepaidItems)} color="blue" />
+              <ResultItem label="Total Closing Costs" value={formatCurrency(result.totalClosingCosts)} color="amber" />
             </div>
             <div className="mt-4 p-4 bg-green-50 dark:bg-green-950 rounded-lg">
               <p className="text-sm font-semibold text-green-800 dark:text-green-300">Total Cash Needed: {formatCurrency(result.totalCashNeeded)}</p>

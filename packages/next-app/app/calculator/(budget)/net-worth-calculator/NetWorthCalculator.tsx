@@ -59,8 +59,8 @@ export default function NetWorthCalculator() {
           <ResultCard title="Your Net Worth">
             <div className="grid md:grid-cols-4 gap-4">
               <ResultItem label="Total Assets" value={formatCurrency(result.totalAssets)} color="emerald" />
-              <ResultItem label="Total Liabilities" value={formatCurrency(result.totalLiabilities)} color="red" />
-              <ResultItem label="Net Worth" value={formatCurrency(result.netWorth)} color={result.netWorth >= 0 ? "cyan" : "red"} />
+              <ResultItem label="Total Liabilities" value={formatCurrency(result.totalLiabilities)} color="amber" />
+              <ResultItem label="Net Worth" value={formatCurrency(result.netWorth)} color={result.netWorth >= 0 ? "emerald" : "amber"} />
               <ResultItem label="Liquidity Ratio" value={formatPercent(result.liquidityRatio)} color="blue" />
             </div>
             <div className="mt-4 p-4 bg-cyan-50 dark:bg-cyan-950 rounded-lg">

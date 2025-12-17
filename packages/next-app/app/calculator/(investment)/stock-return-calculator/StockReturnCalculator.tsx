@@ -135,7 +135,7 @@ export default function StockReturnCalculator() {
                 <ResultItem
                   label="Annualized Return (CAGR)"
                   value={formatPercent(result.annualizedReturn)}
-                  color="purple"
+                  color="violet"
                 />
                 <ResultItem
                   label="Final Value"
@@ -165,7 +165,7 @@ export default function StockReturnCalculator() {
                       <XAxis dataKey="year" label={{ value: 'Year', position: 'insideBottom', offset: -5 }} />
                       <YAxis label={{ value: 'Value ($)', angle: -90, position: 'insideLeft' }}
                         tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
-                      <Tooltip formatter={(value: number) => formatCurrency(value)} />
+                      <Tooltip formatter={(value) => formatCurrency(value as number)} />
                       <Legend />
                       <Line type="monotone" dataKey="value" stroke="#10b981" name="Portfolio Value" strokeWidth={2} />
                     </LineChart>

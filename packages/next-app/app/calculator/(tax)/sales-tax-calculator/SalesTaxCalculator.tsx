@@ -41,7 +41,7 @@ export default function SalesTaxCalculator() {
           <ResultCard title="Sales Tax Calculation">
             <div className="grid md:grid-cols-3 gap-4">
               <ResultItem label="Pre-Tax Amount" value={formatCurrency(result.preTaxAmount)} color="blue" />
-              <ResultItem label="Tax Amount" value={formatCurrency(result.taxAmount)} color="red" />
+              <ResultItem label="Tax Amount" value={formatCurrency(result.taxAmount)} color="amber" />
               <ResultItem label="Total Amount" value={formatCurrency(result.totalAmount)} color="violet" />
             </div>
           </ResultCard>

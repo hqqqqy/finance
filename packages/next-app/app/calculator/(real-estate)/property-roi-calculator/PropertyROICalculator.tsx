@@ -45,7 +45,7 @@ export default function PropertyROICalculator() {
           <ResultCard title="Investment Returns">
             <div className="grid md:grid-cols-3 gap-4">
               <ResultItem label="Annual Cash Flow" value={formatCurrency(result.annualCashFlow)} color="emerald" />
-              <ResultItem label="Cash-on-Cash Return" value={formatPercent(result.cashOnCashReturn)} color="green" />
+              <ResultItem label="Cash-on-Cash Return" value={formatPercent(result.cashOnCashReturn)} color="violet" />
               <ResultItem label="Cap Rate" value={formatPercent(result.capRate)} color="blue" />
             </div>
           </ResultCard>

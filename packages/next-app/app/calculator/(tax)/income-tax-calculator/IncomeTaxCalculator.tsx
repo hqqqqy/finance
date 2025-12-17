@@ -43,8 +43,8 @@ export default function IncomeTaxCalculator() {
           <ResultCard title="Tax Calculation">
             <div className="grid md:grid-cols-4 gap-4">
               <ResultItem label="Federal Tax" value={formatCurrency(result.federalTax)} color="violet" />
-              <ResultItem label="State Tax" value={formatCurrency(result.stateTax)} color="purple" />
-              <ResultItem label="Total Tax" value={formatCurrency(result.totalTax)} color="red" />
+              <ResultItem label="State Tax" value={formatCurrency(result.stateTax)} color="violet" />
+              <ResultItem label="Total Tax" value={formatCurrency(result.totalTax)} color="amber" />
               <ResultItem label="Net Income" value={formatCurrency(result.netIncome)} color="emerald" />
             </div>
             <div className="mt-4 p-4 bg-violet-50 dark:bg-violet-950 rounded-lg">

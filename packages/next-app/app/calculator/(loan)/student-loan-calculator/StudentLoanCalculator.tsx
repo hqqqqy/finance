@@ -87,7 +87,7 @@ export default function StudentLoanCalculator() {
             <div className="grid md:grid-cols-3 gap-4">
               <ResultItem label="Monthly Payment" value={formatCurrency(result.monthlyPayment)} color="amber" />
               <ResultItem label="Total Payment" value={formatCurrency(result.totalPayment)} color="blue" />
-              <ResultItem label="Total Interest" value={formatCurrency(result.totalInterest)} color="purple" />
+              <ResultItem label="Total Interest" value={formatCurrency(result.totalInterest)} color="violet" />
             </div>
             <div className="mt-4 p-4 bg-amber-50 dark:bg-amber-950 rounded-lg">
               <p className="text-sm font-semibold text-amber-800 dark:text-amber-300">

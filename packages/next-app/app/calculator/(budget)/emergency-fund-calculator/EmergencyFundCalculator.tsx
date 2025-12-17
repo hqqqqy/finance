@@ -44,7 +44,7 @@ export default function EmergencyFundCalculator() {
         {result && (
           <ResultCard title="Emergency Fund Plan">
             <div className="grid md:grid-cols-3 gap-4">
-              <ResultItem label="Recommended Fund" value={formatCurrency(result.recommendedFund)} color="cyan" />
+              <ResultItem label="Recommended Fund" value={formatCurrency(result.recommendedFund)} color="emerald" />
               <ResultItem label="Amount Needed" value={formatCurrency(result.amountNeeded)} color="amber" />
               <ResultItem label="Months to Save" value={result.monthsToSave.toString()} color="blue" />
             </div>

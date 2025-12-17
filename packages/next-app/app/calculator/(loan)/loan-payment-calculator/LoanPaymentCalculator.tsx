@@ -202,7 +202,7 @@ export default function LoanPaymentCalculator() {
                         tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`}
                       />
                       <Tooltip
-                        formatter={(value: number) => formatCurrency(value)}
+                        formatter={(value) => formatCurrency(value as number)}
                         labelFormatter={(label) => `Year ${label}`}
                       />
                       <Legend />
@@ -247,7 +247,7 @@ export default function LoanPaymentCalculator() {
                         tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`}
                       />
                       <Tooltip
-                        formatter={(value: number) => formatCurrency(value)}
+                        formatter={(value) => formatCurrency(value as number)}
                         labelFormatter={(label) => `Year ${label}`}
                       />
                       <Legend />

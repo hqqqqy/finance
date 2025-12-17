@@ -181,7 +181,7 @@ export default function RothIRACalculator() {
                       <XAxis dataKey="age" label={{ value: 'Age', position: 'insideBottom', offset: -5 }} />
                       <YAxis label={{ value: 'Balance ($)', angle: -90, position: 'insideLeft' }}
                         tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
-                      <Tooltip formatter={(value: number) => formatCurrency(value)}
+                      <Tooltip formatter={(value) => formatCurrency(value as number)}
                         labelFormatter={(label) => `Age ${label}`} />
                       <Legend />
                       <Area type="monotone" dataKey="balance" stroke="#10b981" fill="#10b981" name="Total Balance" />

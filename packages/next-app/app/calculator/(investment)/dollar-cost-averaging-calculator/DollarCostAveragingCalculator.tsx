@@ -104,7 +104,7 @@ export default function DollarCostAveragingCalculator() {
               <div className="grid md:grid-cols-4 gap-4">
                 <ResultItem label="Total Invested" value={formatCurrency(result.totalInvested)} color="blue" />
                 <ResultItem label="Final Value" value={formatCurrency(result.finalValue)} color="emerald" />
-                <ResultItem label="Total Return" value={formatCurrency(result.totalReturn)} color="purple" />
+                <ResultItem label="Total Return" value={formatCurrency(result.totalReturn)} color="violet" />
                 <ResultItem label="Return %" value={formatPercent(result.returnPercent)} color="amber" />
               </div>
               <div className="mt-4 grid md:grid-cols-2 gap-4">
@@ -130,7 +130,7 @@ export default function DollarCostAveragingCalculator() {
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="month" label={{ value: 'Period', position: 'insideBottom', offset: -5 }} />
                       <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
-                      <Tooltip formatter={(value: number) => formatCurrency(value)} />
+                      <Tooltip formatter={(value) => formatCurrency(value as number)} />
                       <Legend />
                       <Line type="monotone" dataKey="marketValue" stroke="#10b981" name="Market Value" strokeWidth={2} />
                       <Line type="monotone" dataKey="totalInvested" stroke="#3b82f6" name="Amount Invested" strokeWidth={2} />

@@ -46,7 +46,7 @@ export default function CapitalGainsCalculator() {
           <ResultCard title="Capital Gains Tax">
             <div className="grid md:grid-cols-3 gap-4">
               <ResultItem label="Capital Gain" value={formatCurrency(result.capitalGain)} color="emerald" />
-              <ResultItem label="Tax Owed" value={formatCurrency(result.taxOwed)} color="red" />
+              <ResultItem label="Tax Owed" value={formatCurrency(result.taxOwed)} color="amber" />
               <ResultItem label="Net Profit" value={formatCurrency(result.netProfit)} color="violet" />
             </div>
           </ResultCard>

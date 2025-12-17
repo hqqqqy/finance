@@ -34,7 +34,7 @@ export default function CryptoProfitCalculator() {
     setResult(calculatedResult);
   };
 
-  const profitColor = result && result.profit >= 0 ? "emerald" : "red";
+  const profitColor = result && result.profit >= 0 ? "emerald" : "amber";
 
   return (
     <CalculatorPageWrapper colorTheme="emerald">
@@ -98,7 +98,7 @@ export default function CryptoProfitCalculator() {
                   value={formatCurrency(Math.abs(result.profit))} 
                   color={profitColor} 
                 />
-                <ResultItem label="ROI" value={formatPercent(result.roi)} color="purple" />
+                <ResultItem label="ROI" value={formatPercent(result.roi)} color="violet" />
               </div>
               
               <div className="mt-4 grid md:grid-cols-3 gap-4">
