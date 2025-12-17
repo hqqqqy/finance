@@ -66,7 +66,7 @@ Our `vercel.json` configuration:
   "buildCommand": "cd packages/next-app && yarn build",
   "devCommand": "cd packages/next-app && yarn dev",
   "installCommand": "yarn install",
-  "framework": "nextjs",
+  "framework": null,
   "outputDirectory": "packages/next-app/.next"
 }
 ```

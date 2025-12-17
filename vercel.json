@@ -1,8 +1,8 @@
 {
-  "buildCommand": "yarn workspace finance-calc-lab build",
-  "devCommand": "yarn workspace finance-calc-lab dev",
+  "buildCommand": "cd packages/next-app && yarn build",
+  "devCommand": "cd packages/next-app && yarn dev",
   "installCommand": "yarn install",
-  "framework": "nextjs",
+  "framework": null,
   "outputDirectory": "packages/next-app/.next"
 }
 
