@@ -63,24 +63,25 @@ Our `vercel.json` configuration:
 
 ```json
 {
-  "buildCommand": "cd packages/next-app && yarn build",
-  "devCommand": "cd packages/next-app && yarn dev",
+  "buildCommand": "yarn build",
+  "devCommand": "yarn dev",
   "installCommand": "yarn install",
-  "framework": null,
-  "outputDirectory": "packages/next-app/.next"
+  "outputDirectory": ".next"
 }
 ```
 
 ### Build Settings in Vercel Dashboard
 
-If you need to override settings in the dashboard:
+**IMPORTANT:** These settings must be configured in your Vercel project:
 
 - **Framework Preset**: Next.js
-- **Root Directory**: `packages/next-app` (or leave blank with vercel.json)
-- **Build Command**: `yarn build`
-- **Output Directory**: `.next`
-- **Install Command**: `yarn install`
-- **Development Command**: `yarn dev`
+- **Root Directory**: `packages/next-app` ⚠️ **REQUIRED for monorepo**
+- **Build Command**: `yarn build` (override if shown)
+- **Output Directory**: `.next` (override if shown)
+- **Install Command**: `yarn install` (override if shown)
+- **Development Command**: `yarn dev` (override if shown)
+
+**Why Root Directory is required:** Since this is a monorepo, Vercel needs to know where the Next.js app is located. With Root Directory set to `packages/next-app`, all commands run from that directory, so we don't need `cd` commands in vercel.json.
 
 ## Environment Variables
 
