@@ -26,3 +26,4 @@ export function calculateClosingCosts(homePrice: number, downPaymentPercent: num
   };
 }
 
+

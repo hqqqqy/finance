@@ -16,3 +16,4 @@ export function calculateIncomeTax(grossIncome: number, federalRate: number, sta
   return { grossIncome, federalTax, stateTax, totalTax, effectiveRate, netIncome };
 }
 
+

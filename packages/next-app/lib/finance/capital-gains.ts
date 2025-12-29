@@ -14,3 +14,4 @@ export function calculateCapitalGains(purchasePrice: number, salePrice: number, 
   return { purchasePrice, salePrice, capitalGain, taxRate, taxOwed, netProfit };
 }
 
+

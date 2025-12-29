@@ -22,3 +22,4 @@ export function calculateAffordability(annualIncome: number, monthlyDebts: numbe
   };
 }
 
+

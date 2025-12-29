@@ -3,201 +3,242 @@ import Link from "next/link";
 import { BookOpen, TrendingUp, Home, DollarSign, GraduationCap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Learn Personal Finance - Free Financial Education | Finance Calc Lab",
-  description: "Free financial education resources covering personal finance, investing, real estate, and economics. Learn money management skills to build wealth.",
-  keywords: ["personal finance education", "financial literacy", "investing basics", "money management", "financial planning"],
+  title: "Economics Learning Center | Finance Calc Lab",
+  description: "Comprehensive economics courses: microeconomics and macroeconomics with intuition, diagrams, and practice questions.",
+  keywords: ["economics course", "microeconomics", "macroeconomics", "market structures", "consumer choice", "GDP", "inflation", "practice questions"],
 };
 
-export default function LearnPage() {
-  const categories = [
-    {
-      title: "Personal Finance Basics",
-      description: "Essential money management skills for everyday life",
-      icon: DollarSign,
-      iconBg: "bg-emerald-100 dark:bg-emerald-900",
-      iconColor: "text-emerald-600 dark:text-emerald-400",
-      topics: [
-        "Budgeting 101",
-        "Emergency Fund Guide",
-        "Debt Payoff Strategies",
-        "Credit Score Basics",
-        "Saving Strategies"
-      ],
-      comingSoon: true
-    },
-    {
-      title: "Investing Fundamentals",
-      description: "Learn how to grow your wealth through smart investing",
-      icon: TrendingUp,
-      iconBg: "bg-blue-100 dark:bg-blue-900",
-      iconColor: "text-blue-600 dark:text-blue-400",
-      topics: [
-        "Compound Interest Explained",
-        "Stock Market Basics",
-        "Index Funds & ETFs",
-        "401k & IRA Guide",
-        "Portfolio Diversification",
-        "Risk Management"
-      ],
-      comingSoon: true
-    },
-    {
-      title: "Real Estate Investing",
-      description: "Everything about buying, owning, and investing in property",
-      icon: Home,
-      iconBg: "bg-amber-100 dark:bg-amber-900",
-      iconColor: "text-amber-600 dark:text-amber-400",
-      topics: [
-        "First-Time Home Buyer Guide",
-        "Rent vs Buy Analysis",
-        "Mortgage Types Explained",
-        "Rental Property Investing",
-        "House Flipping Basics"
-      ],
-      comingSoon: true
-    },
-    {
-      title: "Economics Basics",
-      description: "Understand the economic forces that affect your finances",
-      icon: BookOpen,
-      iconBg: "bg-violet-100 dark:bg-violet-900",
-      iconColor: "text-violet-600 dark:text-violet-400",
-      topics: [
-        "Microeconomics Basics",
-        "Macroeconomics Basics",
-        "Understanding Inflation",
-        "Monetary Policy Explained",
-        "Interest Rates & The Economy"
-      ],
-      comingSoon: true
-    }
-  ];
+const microChapters = [
+  {
+    id: 1,
+    title: "Introduction to Microeconomics",
+    description: "Scarcity, trade-offs, incentives, and the big ideas that underpin every later chapter.",
+    duration: "45 min",
+    difficulty: "Beginner",
+    href: "/learn/microeconomics/chapter-1",
+    topics: ["Scarcity", "Opportunity cost", "Positive vs normative"],
+    color: "from-violet-50 to-violet-100 border-violet-200 text-violet-700",
+  },
+  {
+    id: 2,
+    title: "Demand, Supply & Market Equilibrium",
+    description: "How prices coordinate buyers and sellers, and what happens when policy or shocks hit a market.",
+    duration: "60 min",
+    difficulty: "Beginner",
+    href: "/learn/microeconomics/chapter-2",
+    topics: ["Demand and supply shifts", "Elasticity", "Price controls"],
+    color: "from-blue-50 to-blue-100 border-blue-200 text-blue-700",
+  },
+  {
+    id: 3,
+    title: "Consumer Choice",
+    description: "Utility, indifference curves, income vs substitution effects, and the consumer optimum.",
+    duration: "75 min",
+    difficulty: "Intermediate",
+    href: "/learn/microeconomics/chapter-3",
+    topics: ["Utility", "Budget constraint", "MRS = MRT"],
+    color: "from-emerald-50 to-emerald-100 border-emerald-200 text-emerald-700",
+  },
+  {
+    id: 4,
+    title: "Production Technology",
+    description: "Production functions, marginal products, isoquants, and returns to scale for firms.",
+    duration: "60 min",
+    difficulty: "Intermediate",
+    href: "/learn/microeconomics/chapter-4",
+    topics: ["Marginal product", "Isoquants", "Returns to scale"],
+    color: "from-orange-50 to-orange-100 border-orange-200 text-orange-700",
+  },
+  {
+    id: 5,
+    title: "Costs",
+    description: "Short-run vs long-run costs, cost curves, and cost minimization via isoquants/isocosts.",
+    duration: "60 min",
+    difficulty: "Intermediate",
+    href: "/learn/microeconomics/chapter-5",
+    topics: ["Cost curves", "Economic profit", "Cost minimization"],
+    color: "from-cyan-50 to-cyan-100 border-cyan-200 text-cyan-700",
+  },
+  {
+    id: 6,
+    title: "Market Structures",
+    description: "Perfect competition through oligopoly, including Cournot and price discrimination intuition.",
+    duration: "90 min",
+    difficulty: "Advanced",
+    href: "/learn/microeconomics/chapter-6-7",
+    topics: ["Perfect competition", "Monopoly", "Oligopoly"],
+    color: "from-pink-50 to-pink-100 border-pink-200 text-pink-700",
+  },
+  {
+    id: 8,
+    title: "Factor Markets",
+    description: "Labor, land, and capital pricing: value of marginal product, backward-bending supply, inequality.",
+    duration: "70 min",
+    difficulty: "Intermediate",
+    href: "/learn/microeconomics/chapter-8",
+    topics: ["Factor demand", "Labor supply", "Lorenz curve"],
+    color: "from-violet-50 to-violet-100 border-violet-200 text-violet-700",
+  },
+  {
+    id: 9,
+    title: "General Equilibrium & Welfare",
+    description: "Edgeworth boxes, Pareto efficiency, and the trade-offs between equity and efficiency.",
+    duration: "75 min",
+    difficulty: "Advanced",
+    href: "/learn/microeconomics/chapter-9",
+    topics: ["General equilibrium", "Pareto efficiency", "Welfare theorems"],
+    color: "from-emerald-50 to-emerald-100 border-emerald-200 text-emerald-700",
+  },
+  {
+    id: 10,
+    title: "Game Theory Basics",
+    description: "Strategic thinking, Nash equilibrium, and why firms/households randomize in mixed strategies.",
+    duration: "80 min",
+    difficulty: "Advanced",
+    href: "/learn/microeconomics/chapter-10",
+    topics: ["Nash equilibrium", "Dominant strategies", "Dynamic games"],
+    color: "from-blue-50 to-blue-100 border-blue-200 text-blue-700",
+  },
+  {
+    id: 11,
+    title: "Market Failure & Policy",
+    description: "Externalities, public goods, asymmetric information, and the policy toolkit to fix them.",
+    duration: "85 min",
+    difficulty: "Advanced",
+    href: "/learn/microeconomics/chapter-11",
+    topics: ["Externalities", "Public goods", "Information problems"],
+    color: "from-orange-50 to-orange-100 border-orange-200 text-orange-700",
+  },
+];
 
+export default function LearnPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-950 dark:to-gray-950">
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex justify-center mb-4">
-            <GraduationCap className="w-16 h-16 text-emerald-600" />
+      <div className="max-w-6xl mx-auto px-4 py-16 space-y-12">
+        <header className="text-center space-y-4">
+          <div className="flex justify-center">
+            <BookOpen className="w-14 h-14 text-violet-600 dark:text-violet-300" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Financial Education Center
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Learn the fundamentals of personal finance, investing, and wealth building. 
-            Free, comprehensive resources to help you master your money.
+          <h1 className="text-4xl md:text-5xl font-bold">Economics Learning Center</h1>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Master economics with comprehensive courses in microeconomics and macroeconomics. 
+            Each course features clear explanations, real-world examples, diagrams, and practice questions.
           </p>
-        </div>
+        </header>
 
-        {/* Coming Soon Notice */}
-        <div className="max-w-3xl mx-auto mb-12 p-6 bg-emerald-50 dark:bg-emerald-950 rounded-lg border-l-4 border-emerald-500">
-          <h3 className="text-lg font-semibold text-emerald-900 dark:text-emerald-200 mb-2">
-            📚 Coming Soon
-          </h3>
-          <p className="text-emerald-800 dark:text-emerald-300">
-            We're currently developing comprehensive financial education courses and guides. 
-            These resources will be available soon and will help you build strong financial literacy skills. 
-            In the meantime, explore our free calculators to start planning your financial future.
-          </p>
-          <Link 
-            href="/calculator" 
-            className="inline-block mt-4 text-emerald-700 dark:text-emerald-300 font-semibold hover:underline"
+        {/* Course Cards */}
+        <section className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <Link
+            href="/learn/microeconomics"
+            className="block bg-gradient-to-br from-violet-500 to-purple-600 text-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all group"
           >
-            Browse Calculators →
+            <div className="flex items-center gap-3 mb-4">
+              <TrendingUp className="w-10 h-10" />
+              <h2 className="text-3xl font-bold">Microeconomics</h2>
+            </div>
+            <p className="text-lg mb-4 text-white/90">
+              Markets, consumer choice, firm behavior, and strategic interaction. 11 chapters from basics to game theory.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-4">
+              <span className="text-sm px-3 py-1 bg-white/20 rounded-full">11 chapters</span>
+              <span className="text-sm px-3 py-1 bg-white/20 rounded-full">10+ hours</span>
+              <span className="text-sm px-3 py-1 bg-white/20 rounded-full">110+ questions</span>
+            </div>
+            <div className="flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
+              Start Course
+              <TrendingUp className="w-5 h-5" />
+            </div>
           </Link>
+
+          <Link
+            href="/learn/macroeconomics"
+            className="block bg-gradient-to-br from-blue-500 to-cyan-600 text-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all group"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <DollarSign className="w-10 h-10" />
+              <h2 className="text-3xl font-bold">Macroeconomics</h2>
+            </div>
+            <p className="text-lg mb-4 text-white/90">
+              GDP, inflation, unemployment, growth, and policy. 7 chapters covering the big picture of the economy.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-4">
+              <span className="text-sm px-3 py-1 bg-white/20 rounded-full">7 chapters</span>
+              <span className="text-sm px-3 py-1 bg-white/20 rounded-full">8+ hours</span>
+              <span className="text-sm px-3 py-1 bg-white/20 rounded-full">70+ questions</span>
+            </div>
+            <div className="flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
+              Start Course
+              <TrendingUp className="w-5 h-5" />
+            </div>
+          </Link>
+        </section>
+
+        {/* Microeconomics Section Header */}
+        <div className="text-center pt-8">
+          <h2 className="text-3xl font-bold mb-2">Microeconomics Course</h2>
+          <p className="text-muted-foreground">
+            11 chapters covering markets, consumer decisions, firm behavior, welfare, and strategic interaction
+          </p>
         </div>
 
-        {/* Course Categories */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {categories.map((category) => {
-            const Icon = category.icon;
-            return (
-              <div 
-                key={category.title}
-                className="bg-card rounded-xl p-8 border shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className={`p-3 ${category.iconBg} rounded-lg`}>
-                    <Icon className={`w-8 h-8 ${category.iconColor}`} />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl font-bold">{category.title}</h2>
-                    {category.comingSoon && (
-                      <span className="inline-block mt-1 text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded">
-                        Coming Soon
-                      </span>
-                    )}
-                  </div>
-                </div>
-                
-                <p className="text-muted-foreground mb-6">
-                  {category.description}
-                </p>
+        <section className="grid md:grid-cols-2 gap-6">
+          {microChapters.map((chapter) => (
+            <Link
+              key={chapter.id}
+              href={chapter.href}
+              className={`block rounded-2xl border p-6 bg-gradient-to-br ${chapter.color} shadow-lg transition hover:shadow-2xl`}
+            >
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                  Chapter {chapter.id}
+                </span>
+                <span className="text-xs font-semibold text-muted-foreground">{chapter.duration}</span>
+              </div>
+              <h2 className="text-xl font-bold mb-3">{chapter.title}</h2>
+              <p className="text-sm text-muted-foreground mb-4">{chapter.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {chapter.topics.map((topic) => (
+                  <span
+                    key={topic}
+                    className="text-xs font-semibold px-2.5 py-1 border bg-white/70 dark:bg-slate-900/70 rounded-full text-muted-foreground"
+                  >
+                    {topic}
+                  </span>
+                ))}
+              </div>
+              <p className="text-sm font-semibold text-muted-foreground">
+                Difficulty: {chapter.difficulty}
+              </p>
+            </Link>
+          ))}
+        </section>
 
-                <h3 className="font-semibold mb-3">Topics Covered:</h3>
-                <ul className="space-y-2">
-                  {category.topics.map((topic) => (
-                    <li key={topic} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-emerald-600 rounded-full flex-shrink-0" />
-                      {topic}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Why Learn Section */}
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Financial Education Matters</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="w-8 h-8 text-emerald-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Make Better Decisions</h3>
-              <p className="text-muted-foreground">
-                Understanding financial concepts helps you make informed decisions about saving, investing, and spending.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Build Wealth</h3>
-              <p className="text-muted-foreground">
-                Learn strategies to grow your money through smart investing and financial planning.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Achieve Goals</h3>
-              <p className="text-muted-foreground">
-                Set and reach financial goals like buying a home, retiring comfortably, or becoming debt-free.
-              </p>
-            </div>
+        <section className="bg-card rounded-3xl p-10 border shadow-xl">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl font-bold mb-2">Structured Learning Path</h3>
+            <p className="text-muted-foreground">
+              Each chapter includes ConceptCards, diagrams, and practice questions with persistent progress tracking.
+              Start with either course and learn at your own pace.
+            </p>
           </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="mt-20 text-center bg-gradient-to-r from-emerald-500 to-cyan-500 text-white p-12 rounded-2xl">
-          <h2 className="text-3xl font-bold mb-4">Start Your Financial Journey Today</h2>
-          <p className="text-lg mb-8 opacity-90">
-            While our learning center is under development, start using our free calculators to plan your finances.
-          </p>
-          <Link 
-            href="/calculator" 
-            className="inline-flex items-center px-8 py-3 bg-white text-emerald-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            Explore Calculators
-          </Link>
-        </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/learn/microeconomics"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-2xl shadow-lg hover:bg-violet-500 transition"
+            >
+              Start Microeconomics
+            </Link>
+            <Link
+              href="/learn/macroeconomics"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-2xl shadow-lg hover:bg-blue-500 transition"
+            >
+              Start Macroeconomics
+            </Link>
+          </div>
+        </section>
       </div>
     </div>
   );
 }
+
 

@@ -16,3 +16,4 @@ export default function RentVsBuyCalculatorPage() {
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><RentVsBuyCalculator /></>);
 }
 
+

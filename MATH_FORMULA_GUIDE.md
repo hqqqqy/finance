@@ -386,3 +386,4 @@ When adding formulas to a calculator:
 
 **Remember:** Professional formula presentation builds trust and demonstrates expertise. Always use KaTeX components for mathematical expressions!
 
+

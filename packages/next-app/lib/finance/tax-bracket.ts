@@ -26,3 +26,4 @@ export function calculateTaxBracket(income: number): TaxBracketResult {
   return { income, bracket, marginalRate, effectiveRate, totalTax, netIncome };
 }
 
+

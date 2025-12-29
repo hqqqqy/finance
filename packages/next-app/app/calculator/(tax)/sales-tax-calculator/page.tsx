@@ -16,3 +16,4 @@ export default function SalesTaxCalculatorPage() {
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><SalesTaxCalculator /></>);
 }
 
+

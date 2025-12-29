@@ -88,3 +88,4 @@ export function calculateSimpleCompoundInterest(
   return P * Math.pow(1 + r / n, n * t);
 }
 
+
